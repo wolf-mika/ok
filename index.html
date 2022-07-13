@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
+<title>PS4 9.00 FW Host v2.5 par Wolf-Hack</title>
+<link rel="stylesheet" href="style.css">
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body>
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installation du cache hors ligne: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache installé avec succès ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Maintenant, fermez et rouvrez votre navigateur ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<h1 id="msgs">PS4 9.00 FW Host v2.5 par Wolf-Hack</h1>
+<hr>
+<br>
+<h1 style="font-size:18px;color:yellow;">Principales charges utiles</h1>
+<button class="btn" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onclick=load_binloader()> Chargeur de bacs </button>
+<br>
+<h1 style="font-size:18px;text-align:center;">Charges utiles</h1>
+<button class="btn" onclick=load_todex()> ToDex </button>
+<button class="btn" onclick=load_dumper()> App-Dumper </button>
+<button class="btn" onclick=load_ftp()> FTP </button>
+<button class="btn" onclick=load_app2usb()> App2USB </button>
+<button class="btn" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onclick=load_dbrestore()> DB Restore </button>
+<br>
+<button class="btn" onclick=load_enablebUpdates()> Activer les mises à jour </button>
+<button class="btn" onclick=load_disableUpdates()> Désactiver les mises à jour </button>
+<button class="btn" onclick=load_historyBlocker()> Bloqueur d'historique </button>
+<button class="btn" onclick=load_kernelDump()> Videur de noyau </button>
+<button class="btn" onclick=load_moduleDump()> Déchargeur de modules </button>
+<button class="btn" onclick=load_ps4debug()> PS4 Debug </button>
+<br>
+<button class="btn" onclick=load_disbAslr()> Désactiver l'ASLR </button>
+<button class="btn" onclick=load_exitidu()> Quitter l'UDI </button>
+<button class="btn" onclick=load_rifRen()> RIF Renamer </button>
+<button class="btn" onclick=load_permUart()> Valeur permanente </button>
+<button class="btn" onclick=load_webrte()> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web"> Web formateur PS4 </button></a>
+<br>
+<a href="webactivator.html"><button class="btn" style="margin-left: 77px;"> Web-Activator </button></a>
+<button class="btn btn-toolbox" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onclick=load_fanthreshold() style="margin-right: 8px;"> Seuil du ventilateur </button><select id="tempC"></select>&#176;C
+<br>
+<h1 style="font-size:18px;color:yellow;">Charges utiles en ligne</h1>
+<a href="online.html"><button class="btn btn-web" style="width: 468px;"> Cliquez ici pour charger la page </button></a>
+<br>
+<h1 style="margin-top: 55px;color: yellow;">Remerciement spécial à:<a style="color:white; margin-left: 15px;">Mika-Wolf</a></h1>
+<script>
+for(var i=40; i<=75; i=i+5){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+</script>
+<script>
+function load_goldhen222(){
+msgs.innerHTML="Chargement de GoldHEN v2.2.2... Veuillez patienter!!!";
+PLfile = "goldhen_2.2.2.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_binloader(){
+msgs.innerHTML="Lancement de Bin Loader... Veuillez patienter !!!";
+run_jb = "binloader";
+setTimeout(poc,1500);
+}
+
+function load_todex(){
+msgs.innerHTML="Chargement de ToDex... Veuillez patienter !!!"
+PLfile = "todex.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dumper(){
+msgs.innerHTML="Chargement de l'App-Dumper... Veuillez patienter !!!"
+PLfile = "dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_ftp(){
+msgs.innerHTML="Chargement du FTP... Veuillez patienter !!!"
+PLfile = "ftp.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_app2usb(){
+msgs.innerHTML="Chargement d'App2USB... Veuillez patienter !!!"
+PLfile = "app2usb.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dbackup(){
+msgs.innerHTML="Chargement de la sauvegarde DB ... veuillez patienter !!!"
+PLfile = "backup.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dbrestore(){
+msgs.innerHTML="Chargement de dB restaurer ... veuillez patienter !!!"
+PLfile = "restore.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_enablebUpdates(){
+msgs.innerHTML="Chargement Activer les mises à jour ... Veuillez patienter !!!"
+PLfile = "enable-updates.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_disableUpdates(){
+msgs.innerHTML="Chargement des mises à jour désactivées ... veuillez patienter !!!"
+PLfile = "disable-updates.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_historyBlocker(){
+msgs.innerHTML="Chargement d'historique Blocker ... s'il vous plaît attendez !!!"
+PLfile = "history-blocker.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_kernelDump(){
+msgs.innerHTML="Chargement du noyau Dumper ... veuillez patienter!!!"
+PLfile = "kernel-dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_moduleDump(){
+msgs.innerHTML="Chargement du module Dumper ... veuillez patienter !!!"
+PLfile = "module-dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_ps4debug(){
+msgs.innerHTML="Chargement de PS4 Debug ... s'il vous plaît attendez!!!"
+PLfile = "ps4debug.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_disbAslr(){
+msgs.innerHTML="Chargement Désactiver ASLR ... Veuillez patienter !!!"
+PLfile = "disable-aslr.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_exitidu(){
+msgs.innerHTML="Chargement de sortie IDU ... s'il vous plaît attendez !!!"
+PLfile = "exit-idu.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_rifRen(){
+msgs.innerHTML="Chargement Rif Renamer ... veuillez patienter !!!"
+PLfile = "rif-renamer.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_permUart(){
+msgs.innerHTML="Chargement de UART permanent ... veuillez patienter !!!"
+PLfile = "permanent-uart.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_webrte(){
+msgs.innerHTML="Chargement de weBrt ... s'il vous plaît attendez !!!"
+PLfile = "webrte.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_toolbox(){
+msgs.innerHTML="Chargement de la boîte à outils Orbis ... veuillez patienter !!!"
+PLfile = "Orbis-Toolbox-900.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_fanthreshold(){
+msgs.innerHTML="Chargement du seuil de ventilateur ... veuillez patienter !!!"
+PLfile = "fan-threshold"+tempC.value+".bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+</script>
+</body>
+</html>
